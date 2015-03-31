@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Got a funny story? </h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Topic</th>
+      <th>Last post</th>
+      <th>User name</th>
+      <th>Replies</th>
+      <th>Views</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @funnies.each do |funny| %>
+      <tr>
+        <td><%= funny.topic %></td>
+        <td><%= funny.last_post %></td>
+        <td><%= funny.user_name %></td>
+        <td><%= funny.replies %></td>
+        <td><%= funny.views %></td>
+        <td><%= link_to 'Show', funny %></td>
+        <td><%= link_to 'Edit', edit_funny_path(funny) %></td>
+        <td><%= link_to 'Destroy', funny, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Funny', new_funny_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Topic:</strong>
+  <%= @question.topic %>
+</p>
+
+<p>
+  <strong>Last post:</strong>
+  <%= @question.last_post %>
+</p>
+
+<p>
+  <strong>User name:</strong>
+  <%= @question.user_name %>
+</p>
+
+<p>
+  <strong>Replies:</strong>
+  <%= @question.replies %>
+</p>
+
+<p>
+  <strong>Views:</strong>
+  <%= @question.views %>
+</p>
+
+<%= link_to 'Edit', edit_question_path(@question) %> |
+<%= link_to 'Back', questions_path %>

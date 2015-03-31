@@ -1,0 +1,37 @@
+<%= form_for(@vent) do |f| %>
+  <% if @vent.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@vent.errors.count, "error") %> prohibited this vent from being saved:</h2>
+
+      <ul>
+      <% @vent.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :topic %><br>
+    <%= f.text_field :topic %>
+  </div>
+  <div class="field">
+    <%= f.label :last_post %><br>
+    <%= f.text_field :last_post %>
+  </div>
+  <div class="field">
+    <%= f.label :user_name %><br>
+    <%= f.text_field :user_name %>
+  </div>
+  <div class="field">
+    <%= f.label :replies %><br>
+    <%= f.number_field :replies %>
+  </div>
+  <div class="field">
+    <%= f.label :views %><br>
+    <%= f.number_field :views %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

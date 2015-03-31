@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Topic:</strong>
+  <%= @vent.topic %>
+</p>
+
+<p>
+  <strong>Last post:</strong>
+  <%= @vent.last_post %>
+</p>
+
+<p>
+  <strong>User name:</strong>
+  <%= @vent.user_name %>
+</p>
+
+<p>
+  <strong>Replies:</strong>
+  <%= @vent.replies %>
+</p>
+
+<p>
+  <strong>Views:</strong>
+  <%= @vent.views %>
+</p>
+
+<%= link_to 'Edit', edit_vent_path(@vent) %> |
+<%= link_to 'Back', vents_path %>
