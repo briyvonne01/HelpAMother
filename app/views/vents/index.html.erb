@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Need to release some frustration? </h1>
+<p>We understand. Let it all out Mom. This is your virtual shoulder to cry on.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Topic</th>
+      <th>Last post</th>
+      <th>User name</th>
+      <th>Replies</th>
+      <th>Views</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vents.each do |vent| %>
+      <tr>
+        <td><%= vent.topic %></td>
+        <td><%= vent.last_post %></td>
+        <td><%= vent.user_name %></td>
+        <td><%= vent.replies %></td>
+        <td><%= vent.views %></td>
+        <td><%= link_to 'Show', vent %></td>
+        <td><%= link_to 'Edit', edit_vent_path(vent) %></td>
+        <td><%= link_to 'Destroy', vent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vent', new_vent_path %>

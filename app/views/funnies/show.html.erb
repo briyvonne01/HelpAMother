@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Topic:</strong>
+  <%= @funny.topic %>
+</p>
+
+<p>
+  <strong>Last post:</strong>
+  <%= @funny.last_post %>
+</p>
+
+<p>
+  <strong>User name:</strong>
+  <%= @funny.user_name %>
+</p>
+
+<p>
+  <strong>Replies:</strong>
+  <%= @funny.replies %>
+</p>
+
+<p>
+  <strong>Views:</strong>
+  <%= @funny.views %>
+</p>
+
+<%= link_to 'Edit', edit_funny_path(@funny) %> |
+<%= link_to 'Back', funnies_path %>

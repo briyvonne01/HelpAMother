@@ -11,11 +11,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150321222650) do
+ActiveRecord::Schema.define(version: 20150331002755) do
+
+  create_table "funnies", force: :cascade do |t|
+    t.string   "topic",      limit: 255
+    t.string   "last_post",  limit: 255
+    t.string   "user_name",  limit: 255
+    t.integer  "replies",    limit: 4
+    t.integer  "views",      limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.string   "topic",      limit: 255
+    t.string   "last_post",  limit: 255
+    t.string   "user_name",  limit: 255
+    t.integer  "replies",    limit: 4
+    t.integer  "views",      limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "users", force: :cascade do |t|
-    t.string   "first_name", limit: 255
-    t.string   "last_name",  limit: 255
+    t.string   "first_name",  limit: 255
+    t.string   "last_name",   limit: 255
+    t.string   "email",       limit: 255
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.string   "password",    limit: 255
+    t.integer  "primary_key", limit: 4
+  end
+
+  create_table "vents", force: :cascade do |t|
+    t.string   "topic",      limit: 255
+    t.string   "last_post",  limit: 255
+    t.string   "user_name",  limit: 255
+    t.integer  "replies",    limit: 4
+    t.integer  "views",      limit: 4
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end

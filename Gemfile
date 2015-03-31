@@ -46,3 +46,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap-sass', '3.2.0.2'
 
 gem 'autoprefixer-rails'
+
+# Encrypt passwords and ask for confirmation befor you sign up
+gem 'bcrypt'
