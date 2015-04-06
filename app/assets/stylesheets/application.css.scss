@@ -1,8 +1,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "sessions";
 
 .google {
   font-family: 'The Girl Next Door', cursive;
+  color:#330487;
 }
 
 .google_pg {
@@ -14,4 +16,5 @@
   padding: 10px;
   margin-bottom: 10px;
   position: relative;
+  color:#330487;
 }
