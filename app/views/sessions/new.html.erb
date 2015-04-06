@@ -1,20 +1,56 @@
-<div>
+<!--future enhancements: login with google, facebook, and twitter-->
+<div class="sessions">
     <% if flash[:alert] %>
-        <p id="notice"><%= flash[:alert]  %></p>
+      <div class="alert alert-danger" id="notice" role="alert"><%= flash[:alert]  %></div>
     <% end %>
 
   <%= form_tag do %>
       <fieldset>
-        <legend>Please log in</legend>
-        <div>
-          <%= label_tag :email, 'Email' %>
-          <%= text_field :email, params[:email] %>
-          <%= label_tag :password, 'Password' %>
-          <%= password_field_tag :password, params[:password] %>
+
+        <div class="container" id="loginBox">
+          <form>
+
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title title"> Welcome</h3>
+              </div>
+              <div class="panel-body" style="color: #330487">
+
+                <p class="title">Please sign in to continue. </p>
+
+                <div class="form-group">
+                  <div class="row"> <!--username row-->
+                    <div class="col-md-9">
+                      <div  class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">Username</span>
+                        <input type="text" placeholder="email@example.com" aria-describedby="basic-addon1" <%= text_field :email, params[:email], class: "form-control" %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="row"> <!--password row-->
+                    <div class="col-md-9">
+                      <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon2">Password</span>
+                        <input type="text" class="form-control" placeholder="Passwsord" aria-describedby="basic-addon2" <%= password_field_tag :password, params[:password] %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row"> <!--login button row-->
+                  <div class="col-md-6">
+                    <button type="button" class="btn btn-default ">Login</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+
         </div>
-        <div>
-          <%= submit_tag "Login" %>
-        </div>
+
       </fieldset>
   <% end %>
 

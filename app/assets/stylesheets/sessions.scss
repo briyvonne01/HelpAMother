@@ -1,3 +1,25 @@
 // Place all the styles related to the Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.sessions {
+  padding: 10%;
+  background-color: #AA89BA;
+}
+
+#loginBox {
+  width: 65%;
+}
+
+//TITLE
+h3.title {
+  font-family: 'The Girl Next Door', cursive;
+  font-size: 40px;
+  color: #330487;
+}
+
+p.title {
+  font-family: 'The Girl Next Door', cursive;
+  font-size: 17px;
+}
+
