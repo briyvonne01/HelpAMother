@@ -1,4 +1,4 @@
-<%= form_for(@question) do |f| %>
+<%= simple_form_for(@question) do |f| %>
   <% if @question.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@question.errors.count, "error") %> prohibited this question from being saved:</h2>
@@ -11,27 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :topic %><br>
-    <%= f.text_field :topic %>
+  <div class="form-group">
+    <%= f.input :topic, input_html: { class: 'form-control'} %>
   </div>
-  <div class="field">
-    <%= f.label :last_post %><br>
-    <%= f.text_field :last_post %>
+  <div class="form-group">
+    <%= f.text_area(:actual_question, size: '47x10', input_html: {class: 'form-control'})  %>
   </div>
-  <div class="field">
-    <%= f.label :user_name %><br>
-    <%= f.text_field :user_name %>
+    <div class="form-group">
+      <%= f.input :tags, input_html: { class: 'form-control'} %>
   </div>
-  <div class="field">
-    <%= f.label :replies %><br>
-    <%= f.number_field :replies %>
-  </div>
-  <div class="field">
-    <%= f.label :views %><br>
-    <%= f.number_field :views %>
-  </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.button :submit, class: "btn btn-primary" %>
   </div>
 <% end %>
