@@ -49,3 +49,5 @@ gem 'autoprefixer-rails'
 
 # Encrypt passwords and ask for confirmation befor you sign up
 gem 'bcrypt'
+
+gem 'simple_form', '~> 3.1.0'
